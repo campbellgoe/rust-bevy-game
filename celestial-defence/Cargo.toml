@@ -1,0 +1,27 @@
+[package]
+name = "celestial-defense"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# Bevy Game Engine
+bevy = "0.15.2" # Use the latest Bevy version
+
+# Bevy Prototype Lyon (for trajectory and UI shapes)
+bevy_prototype_lyon = "0.13.0"
+
+# Physics Engine (Rapier for collision and physics simulation)
+bevy_rapier2d = { version = "^0.29.0" }
+
+# Useful Math Libraries
+glam = "0.30.0"  # For efficient 2D/3D vector math
+rand = "0.9.0"   # Random number generation for meteor spawning
+
+# UI Components (if you need menus)
+bevy_ui = "0.13.0"
+
+[profile.dev]
+opt-level = 1  # Faster compile times while developing
+
+[profile.release]
+opt-level = 3  # Optimized performance for final game
